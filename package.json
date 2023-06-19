@@ -1,14 +1,14 @@
 {
+  "name": "your-app-name",
+  "version": "1.0.0",
+  "description": "Your app description",
+  "scripts": {
+    "start": "echo 'App is running'"
+  },
   "dependencies": {
     "bootstrap": "^5.3.0",
     "bootstrap-icons": "^1.10.5",
     "http-proxy-middleware": "^2.0.6",
     "lightbox2": "^2.11.4"
-  },
-  "name": "myweb",
-  "version": "1.0.0",
-  "description": "For myself development",
-  "scripts": {
-    "build": "echo 'Build step is not required for static sites'"
   }
 }
