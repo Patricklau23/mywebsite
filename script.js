@@ -1,3 +1,4 @@
+//Handle word typing
 document.addEventListener("DOMContentLoaded", function () {
     const wordElement = document.getElementById("word");
     const words = ["Fast learner.", "Software Engineer.","Programmer.","Problem-solver.","Team Player."];
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     display();
   });
 
-  
+  //Handle scroll and nav bar
   window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
     const sections = document.querySelectorAll('section');
@@ -68,10 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
-  
-  
-  
-// Smooth scroll for all navigation links
+
+// Handle Smooth scroll for all navigation links
 const navLinks = document.querySelectorAll('nav ul li a');
 navLinks.forEach(function(link) {
   link.addEventListener('click', function(e) {
@@ -203,3 +202,49 @@ const observer2 = new IntersectionObserver(function(entries, observer2) {
 
 observer.observe(sentenceElement);
 observer2.observe(sentenceElement2);
+
+
+//contact form 
+function handleFormSubmit(event) {
+  event.preventDefault(); // Prevent form from submitting normally
+  console.log('Form submit button clicked.');
+
+  // Get form data
+  const name = document.getElementById('iname').value;
+  const email = document.getElementById('iemail').value;
+  const message = document.getElementById('imessage').value;
+
+  // Create an object with the form data
+  const formData = {
+    name,
+    email,
+    message
+  };
+
+  // Convert the form data to JSON string
+  const jsonData = JSON.stringify(formData);
+
+  // Send an HTTP POST request to the server
+  fetch('/submit-form', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json' // Add this line
+    },
+    body: jsonData
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log('Form data submitted successfully');
+      alert('Submitted successfully! Thank you for contacting me!'); // Display success message to the user
+    } else {
+      console.error('Failed to submit form data');
+    }
+  })
+  .catch(error => {
+    console.error('Failed to submit form data:', error);
+  });
+}
+
+// Add submit event listener to the form
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', handleFormSubmit);
