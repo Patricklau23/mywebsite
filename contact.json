@@ -1,0 +1,13 @@
+[
+    {
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "message": "Hello, I have a question."
+    },
+    {
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "message": "Hi, I'd like to inquire about your services."
+    }
+  ]
+  
