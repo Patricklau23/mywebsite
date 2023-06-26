@@ -228,3 +228,34 @@
     max-width: 100%; /* Ensure the image stays within the frame */
     height: 100%; /* Maintain the aspect ratio of the image */
   }
+
+  /* Add this media query at the end of your existing CSS file */
+@media screen and (max-width: 768px) {
+  /* Adjust the max-width value according to your desired breakpoint */
+
+  /* Update the styles for the navigation menu */
+  #navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Update the styles for the "About" section */
+  #about .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Update the styles for the "Resume" section */
+  #resume .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Update the styles for the "Projects" section */
+  #projects .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Add any other necessary style updates for responsiveness */
+}
