@@ -292,10 +292,11 @@
     h2{
       text-align: left;
     }
-
-    #c{
-      width:1px;
-      height:1px;
+    
+    #c img {
+      width: 20px;
+      height: 20px;
     }
+  
 
   }
