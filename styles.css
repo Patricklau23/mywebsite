@@ -229,33 +229,19 @@
     height: 100%; /* Maintain the aspect ratio of the image */
   }
 
-  /* Add this media query at the end of your existing CSS file */
-@media screen and (max-width: 768px) {
-  /* Adjust the max-width value according to your desired breakpoint */
-
-  /* Update the styles for the navigation menu */
-  #navbar ul {
-    flex-direction: column;
-    align-items: center;
+  @media (max-width: 575px) {
+    .stamp {
+      display:none;
+    }
+    #projects iframe,
+    #projects img {
+      width: 200px;
+      height:200px;
+    }
+    #about h2{
+      text-align: right;
+    }
+    h2{
+      text-align: left;
+    }
   }
-
-  /* Update the styles for the "About" section */
-  #about .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Update the styles for the "Resume" section */
-  #resume .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Update the styles for the "Projects" section */
-  #projects .row {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Add any other necessary style updates for responsiveness */
-}
