@@ -276,7 +276,7 @@
   }
 
   #resume {
-    background: linear-gradient(to right, white, rgba(202, 218, 223, 0.466));
+    background: linear-gradient(to right, white, rgba(212, 236, 244, 0.466));
   }
 
   @media (max-width: 575px) {
