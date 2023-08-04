@@ -110,8 +110,7 @@
   }
   
   .navbar-fixed ul li a.active {
-    border-bottom: 2px solid rgb(155, 155, 236);
-    color:rgb(110, 110, 236);
+    border-bottom: 4px solid rgb(153, 174, 216);
   }
   
   .navbar-fixed:not(.navbar-not-scrolled) {
@@ -176,25 +175,6 @@
     display: none;
   }
 
-  .stamp {
-    color: #333; /* Updated text color for better visibility */
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    background-color: #f5f5dc;
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    opacity: 0.8;
-  }
-  
-  .stamp p {
-    margin: 0;
-  }
   
   #projects h2{
   font-size: 40px;
@@ -233,7 +213,7 @@
     border: 2px solid #333;
     border-radius: 10px;
     padding: 20px;
-    background: linear-gradient(to right, white, rgba(202, 218, 223, 0.466));
+    background: linear-gradient(to right, rgb(219, 188, 188), rgba(212, 236, 244, 0.466));
   }
 
   .frame h3 {
@@ -276,13 +256,27 @@
   }
 
   #resume {
-    background: linear-gradient(to right, white, rgba(212, 236, 244, 0.466));
+    background: linear-gradient(to right, rgb(219, 188, 188), rgba(212, 236, 244, 0.466));
   }
 
-  @media (max-width: 575px) {
-    .stamp {
-      display:none;
+  .underline {
+    border-bottom: 4px solid ; 
+    animation: underlineAnimation 2s forwards; /* Apply the animation when the link becomes active */
+  }
+  
+  @keyframes underlineAnimation {
+    from {
+      border-image: linear-gradient(to right, transparent, rgb(77, 125, 220));
+      border-image-slice: 1;
     }
+    to {
+      border-image: linear-gradient(to right, rgb(77, 125, 220), transparent);
+      border-image-slice: 1;
+    }
+  }
+  
+
+  @media (max-width: 575px) {
     #projects iframe,
     #projects img {
       width: 200px;
@@ -297,6 +291,5 @@
       width: 20px;
       height: 20px;
     }
-  
 
   }

@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  
+
 
 // Handle Smooth scroll for all navigation links
 const navLinks = document.querySelectorAll('nav ul li a');
@@ -248,3 +248,33 @@ function handleFormSubmit(event) {
 // Add submit event listener to the form
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', handleFormSubmit);
+
+
+    // Function to handle the intersection of the sections
+    function handleIntersection(entries) {
+      entries.forEach(entry => {
+        const h2Element = entry.target.querySelector('h2');
+        if (entry.isIntersecting) {
+          h2Element.classList.add('underline');
+        } else {
+          h2Element.classList.remove('underline');
+        }
+      });
+    }
+
+// Create an Intersection Observer instance
+const observers = new IntersectionObserver(handleIntersection);
+
+// Observe the "about" section
+const aboutSection = document.getElementById('about');
+observers.observe(aboutSection);
+
+// Observe the "Projects" section
+const projectSection = document.getElementById('projects');
+observers.observe(projectSection);
+
+const blogSection = document.getElementById('blog');
+observers.observe(blogSection);
+
+const contactSection = document.getElementById('contact');
+observers.observe(contactSection);
