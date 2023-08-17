@@ -2,3 +2,8 @@
 from = "/*"
 to = "/Mywebsite.html"
 status = 200
+
+[[redirects]]
+from = "/submit-form"
+to = "/submit-form.html"
+status = 200
